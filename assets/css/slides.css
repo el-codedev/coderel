@@ -5018,6 +5018,17 @@ body {
   margin-left: 1rem;
 }
 
+/* === Typography Styles === */
+.ae-1, .ae-2, .ae-3 {
+  font-family: 'YourFontFamily', sans-serif;
+  color: #333; /* Example color */
+}
+
+.ae-3 {
+  font-size: 0.8em;
+  line-height: 1.5;
+}
+
 @media (min-width: 768px) {
   .article p, .article li {
     font-weight: 300;
