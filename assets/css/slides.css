@@ -1350,8 +1350,11 @@ p.uppercase, .p.uppercase,
 }
 
 .fade-6 .content {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.6); /* keeps your original background styling */
+  font-size: 0.5em; /* Makes the text smaller */
+  line-height: 1.5; /* Adjust line-height for readability */
 }
+
 
 .fade-7 .content {
   background: rgba(0, 0, 0, 0.7);
