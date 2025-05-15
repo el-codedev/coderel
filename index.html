@@ -1,380 +1,243 @@
-<!-- Copyright © github.dev/el-codedev. All rights reserved. Unauthorized copying of this file, via any medium, is strictly prohibited. -->
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coder El Full Stack Python Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Minimal modal image viewer styling */
+    #imageOverlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
 
-    <!-- Page Title -->
-    <title>Welcome to El</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/img/icons/new2.png">
-    <!-- Compressed Styles -->
-    <link href="assets/css/slides.min.css?41331" rel="stylesheet" type="text/css">
-
-    <!-- jQuery 3.3.1 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Compressed Scripts -->
-    <script src="assets/js/slides.min.js?41331" type="text/javascript"></script>
-    <!-- Fonts and Material Icons -->
-    <link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600,700|Material+Icons"/>
-
-    <!-- Custom Styles for Mouse Cursor -->
-    <style>
-        .mouse {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 20px;
-            height: 30px;
-            background-color: black;
-            border: 3px solid white;
-            border-radius: 10px;
-            pointer-events: none;
-            z-index: 9999;
-        }
-
-        .scroll {
-            position: absolute;
-            top: 1px; /* Initial position */
-            left: 5px;
-            width: 4px;
-            height: 8px;
-            background-color: white;
-            border-radius: 3px;
-            animation: scrollWheel 1s ease-in-out infinite alternate; /* Add animation */
-        }
-
-        @keyframes scrollWheel {
-            0% { top: 1px; }
-            100% { top: 5px; } /* Adjust the final 'top' value as needed */
-        }
-    </style>
+    #fullImage {
+      max-width: 90%;
+      max-height: 90%;
+    }
+  </style>
 </head>
-<body class="slides chain simplifiedMobile animated">
-    <!-- Custom Mouse Cursor -->
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Hi I'm El.</h1>
+      <p class="tagline">And I'm a humble Junior Coder that creates things.</p>
+
+      <div class="robot-icon-container">
+        <svg class="robot" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <g id="robot-body" fill="#fff" stroke="#000" stroke-width="1.5">
+            <rect x="60" y="20" width="80" height="50" rx="10"/>
+            <rect x="75" y="35" width="50" height="25" rx="6"/>
+            <circle cx="85" cy="47" r="4"/>
+            <circle cx="115" cy="47" r="4"/>
+            <line x1="100" y1="20" x2="100" y2="10" stroke-width="3"/>
+            <circle cx="100" cy="5" r="4" stroke-width="2"/>
+            <rect x="70" y="75" width="60" height="50" rx="10"/>
+            <rect x="85" y="95" width="30" height="4" rx="2"/>
+            <path d="M130,80 Q150,100 150,125" stroke-linecap="round" fill="none" stroke-width="5"/>
+            <rect x="142" y="125" width="15" height="20" rx="4"/>
+            <rect x="75" y="130" width="10" height="30" rx="2"/>
+            <rect x="115" y="130" width="10" height="30" rx="2"/>
+            <rect x="70" y="160" width="20" height="10" rx="3"/>
+            <rect x="110" y="160" width="20" height="10" rx="3"/>
+          </g>
+          <g class="waving-arm" fill="#fff" stroke="#000" stroke-width="1.5">
+            <path d="M70,80 Q50,60 50,40" stroke-linecap="round" fill="none" stroke-width="5"/>
+            <rect x="40" y="20" width="15" height="20" rx="4"/>
+          </g>
+        </svg>
+      </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+      <div class="philosophy-section">
+        <h2>I believe that Evolution == Key ;)</h2>
+        <p>No matter the assignment, if it's something new that helps you.. us for that matter.. something that no one thought of before..</p>
+<br>
+        <h2>Let's work on it togeter!</h2>
+        <img
+          class="wide media-thumbnail"
+          src="/Users/themac/Coding/Python_X/.venv/bin/Websites/Coder_El/Images/evolution.png"
+          alt="Evolution Project"
+        />
+      </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+      <div class="projects-section">
+        <h2>Projects</h2>
+        <p>These are some of the projects that I have created for my clients.</p>
+        <br>
+  <div class="project-item">
+          <h3>Action List</h3>
+        <img
+            src="/Users/themac/Coding/Python_X/.venv/bin/Websites/Coder_El/Images/action.png"
+            alt="OFA Project"
+            class="project-thumb"
+            onclick="showLargeImage(this, 'assets/video/Action_List.mp4')"
+            <br>
+            <p>A simple program to guide users in many daily choices they have to make.</p>
+            <p>Go ahead click on the Robot for a video presentation.</p>
+        </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <div class="project-item">
+        <br>
+        <br>
+          <h3>Create & Translate</h3>
+          <img
+            src="/Users/themac/Coding/Python_X/.venv/bin/Websites/Coder_El/Images/translation.png"
+            alt="OFA Project"
+            class="project-thumb"
+            onclick="showLargeImage(this, '/Users/themac/Coding/Python_X/.venv/bin/Websites/Coder_El/Images/manual.png')"
+        <br>
+        <br>
+            <p>Why have humans do this time consuming task?</p>
+            <p>When a robot can do it in 1 second and without typing mistakes.</p>
+            <p>This simple solution not only removed the manual work that would take weeks of time.
+            <p>But also executed the task within seconds.</p>
+            <p>Now the employees would not need to manually type in and translate text.</p>
+            <p>Their value could be placed somewhere else now</p>
+        </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <div class="project-item">
+          <h3>One For All</h3>
+          <img
+            src="/Users/themac/Coding/Python_X/.venv/bin/Websites/Coder_El/Images/ofa.png"
+            alt="OFA Project"
+            class="project-thumb"
+            onclick="showLargeImage(this, '/Users/themac/Coding/Python_X/.venv/bin/Websites/Coder_El/Images/ofa_example.png')"
+        <br>
+        <br>
+            <p>It can be common and what one is used to. But it's not of this time...</p>
+            <p>Often employees are used to some kind of action for the simple reason of "it has always been like this"</p>
+            <p>But one has to understand that this kind of thinking can get very expensive and very extensive over time.</p>
+            <p>If no one re-thinks the way that we try to achieve the goal, we might never reach it and always keep chasing it.</p>
+        </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <div class="project-item">
+        <br>
+        <br>
+          <h3>Manual Work</h3>
+          <img
+            src="/Users/themac/Coding/Python_X/.venv/bin/Websites/Coder_El/Images/manual.png"
+            alt="Manual Work"
+            class="project-thumb"
+            onclick="showLargeImage(this, '/Users/themac/Coding/Python_X/.venv/bin/Websites/Coder_El/Images/manual.png')"
+        <br>
+        <br>
+            <p>A simple program to guide users in many daily choices they have to make.</p>
+            <p>Click on the image for a video presentation.</p>
+        </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <div class="simplicity-section">
+          <h3>Simplicity = Save Budget</h3>
+          <img
+            src="/Users/themac/Coding/Python_X/.venv/bin/Websites/Coder_El/Images/simple.png"
+            alt="Simplicity"
+            class="simplicity-thumb"
+            <br>
+          <br>
+          <p>My 15+ years in corporate structures taught me: simplicity and maximizing internal resources are paramount for efficiency and cost control. I advocate for empowering on-the-ground expertise to avoid unnecessary complexity and spending.</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+        </div>
+  <div class="contact-section">
+        <br>
+        <br>
+          <h3>Contact</h3>
+          <p>If you want to get in touch, just click on the cute Robot, he will take you to my Linkedin</p>
+          <a href="https://www.linkedin.com/in/elgoral-c-b658a1159/" target="_blank" rel="noopener noreferrer">
+            <img src="/Users/themac/Coding/Python_X/.venv/bin/Websites/Coder_El/Images/cute_s.png" alt="LinkedIn Profile">
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="imageOverlay" onclick="closeImage()">
+    <img id="fullImage" src="" alt="Full Project Image"/>
+  </div>
+
+  <main></main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="currentYear"></span> Coder El. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="mouse-icon-container">
     <div class="mouse">
-        <div class="scroll"></div>
-    </div>
-<!-- Navigation -->
-<nav class="side pole">
-  <div class="navigation">
-    <ul></ul>
-  </div>
-</nav>
-
-<!-- Slide 1 (#10) -->
-<section class="slide fade-6 kenBurns">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-
-        <div class="fix-7-12">
-          <h1 class="ae-1">I'm El. I Create things.</h1>
-          <p class="ae-2"><span class="opacity-8">Wether it's code or film, life or fantasy. There is always a way to make things faster or more efficient.</span></p>
-          <p class="ae-3"><span class="opacity-8"></span>Due to several projects that I'm currently working on, this website will evolve with time. You will find sections that are not clickable yet. Please allow me to complete it asap. Thank you for your patience and understanding.</p> <!-- New row added -->
-        </div>
-
-      </div>
+      <div class="scroll-wheel"></div>
     </div>
   </div>
-</section>
-<!-- Slide 2 (#83) -->
-<section class="slide fade-6 kenBurns">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
 
-        <div class="fix-10-12 toCenter">
-          <h1 class="ae-1">Coding & Solutions</h1>
-          <p class="ae-2"><span class="opacity-8">My intention is to evolve, not to re-invent something.
-I'm looking to find solutions for tasks that slow us down or challenge us.
-Below you can click on a thumbnail to get an idea of some of my works.</span></p>
-        </div>
-
-        <div class="fix-12-12 margin-top-3">
-          <ul class="flex fixedSpaces later left">
-
-            <!-- Action List Video Item -->
-            <li class="col-3-12 col-tablet-1-2 col-phone-1-1">
-                <div class="media-container" onclick="handleClick(event, this, 'video')">
-                    <img class="wide media-thumbnail" src="assets/img/myimages/windmills.png" alt="Video Thumbnail" data-type="video">
-                    <video class="wide media-player" playsinline muted oncontextmenu="return false;" style="display: none;" controls controlsList="nodownload">
-                        <source src="assets/video/Action_List.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <h3 class="ae-4">Action List</h3>
-                <div class="ae-5">
-                    <p class="tiny opacity-6">Click on the image for a video presentation.</p>
-                </div>
-            </li>
-
-
-            <!-- OFA Image Item -->
-            <li class="col-3-12 col-tablet-1-2 col-phone-1-1">
-                <div class="media-container" onclick="handleClick(event, this, 'image')" data-src="assets/img/myimages/ofa_example_2.png">
-                  <img class="wide media-thumbnail" src="assets/img/myimages/ofa.png" alt="Image Thumbnail">
-                </div>
-                <h3 class="ae-6">OFA</h3>
-                <div class="ae-7">
-                    <p class="tiny opacity-6">It can be common and what one is used to. But it's not of this time...</p>
-                </div>
-            </li>
-
-            <!-- Manual Work Video Item -->
-            <li class="col-3-12 col-tablet-1-2 col-phone-1-1">
-              <div class="media-container" onclick="handleClick(event, this, 'video')">
-                  <img class="wide media-thumbnail" src="assets/img/myimages/manualwork.png" alt="Video Thumbnail" data-type="video">
-                  <video class="wide media-player" playsinline muted oncontextmenu="return false;" style="display: none;" controls controlsList="nodownload">
-                      <source src="assets/video/Image_Renaming_Video3.mp4" type="video/mp4">
-                  </video>
-              </div>
-              <h3 class="ae-4">Manual Work</h3>
-              <div class="ae-5">
-                  <p class="tiny opacity-6">Click on the image for a video presentation.</p>
-              </div>
-          </li>
-
-            <!-- Simplicity Image Item -->
-            <li class="col-3-12 col-tablet-1-2 col-phone-1-1">
-                <div class="media-container" onclick="handleClick(event, this, 'image')" data-src="assets/img/myimages/simplicity_money.png">
-                  <img class="wide media-thumbnail" src="assets/img/myimages/simplicity.png" alt="Image Thumbnail">
-                </div>
-                <h3 class="ae-6">Simplicity</h3>
-                <div class="ae-7">
-                    <p class="tiny opacity-6">Keep it simple! Don't go external if the tools are in-house. Don't request a new budget for something that needs no budget.</p>
-                </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script>
-function handleClick(event, element, type) {
-    event.preventDefault();
-
-    if (type === 'image') {
-        let imageUrl = element.getAttribute('data-src'); // Extract image URL
-        openFullscreenImage(imageUrl);
-    } else if (type === 'video') {
-        playVideo(element);
-    }
-}
-
-function openFullscreenImage(imageUrl) {
-    console.log("Opening image:", imageUrl);
-
-    document.querySelectorAll(".fullscreen-overlay").forEach(el => el.remove());
-
-    let overlay = document.createElement("div");
-    overlay.classList.add("fullscreen-overlay");
-
-    overlay.innerHTML = `<img src="${imageUrl}" class="fullscreen-image">`;
-    document.body.appendChild(overlay);
-
-    overlay.onclick = function () {
-        document.body.removeChild(overlay);
-    };
-
-    // Close fullscreen image on ESC key
-    document.addEventListener("keydown", function escListener(event) {
-        if (event.key === "Escape") {
-            document.body.removeChild(overlay);
-            document.removeEventListener("keydown", escListener); // Remove listener after use
-        }
-    });
-}
-
-function playVideo(container) {
-    let video = container.querySelector(".media-player");
-    let img = container.querySelector(".media-thumbnail");
-
-    img.style.display = "none"; // Hide the thumbnail
-    video.style.display = "block"; // Show video
-    video.play(); // Start playing
-
-    // Try to enter fullscreen
-    if (video.requestFullscreen) {
-        video.requestFullscreen();
-    } else if (video.mozRequestFullScreen) {
-        video.mozRequestFullScreen();
-    } else if (video.webkitRequestFullscreen) {
-        video.webkitRequestFullscreen();
-    } else if (video.msRequestFullscreen) {
-        video.msRequestFullscreen();
+  <script>
+    function showLargeImage(img, largeSrc) {
+      const overlay = document.getElementById('imageOverlay');
+      const fullImage = document.getElementById('fullImage');
+      fullImage.src = largeSrc;
+      overlay.style.display = 'flex';
     }
 
-    video.onended = function () {
-        resetVideo(container);
-    };
-
-    video.onpause = function () {
-        resetVideo(container);
-    };
-
-    // Exit fullscreen listener
-    document.addEventListener("fullscreenchange", function exitListener() {
-        if (!document.fullscreenElement) {
-            resetVideo(container);
-            document.removeEventListener("fullscreenchange", exitListener);
-        }
-    });
-}
-
-function resetVideo(container) {
-    let video = container.querySelector(".media-player");
-    let img = container.querySelector(".media-thumbnail");
-
-    video.pause();
-    video.currentTime = 0;
-    video.style.display = "none"; // Hide the video
-    img.style.display = "block"; // Show thumbnail
-}
-
-// Close fullscreen media (image or video) on ESC key
-document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-        document.querySelectorAll(".fullscreen-overlay").forEach(overlay => overlay.remove());
-
-        document.querySelectorAll(".media-player").forEach(video => {
-            video.pause();
-            video.currentTime = 0;
-            video.style.display = "none";
-        });
-
-        document.querySelectorAll(".media-thumbnail").forEach(img => {
-            img.style.display = "block"; // Ensure thumbnail always reappears
-        });
+    function closeImage() {
+      const overlay = document.getElementById('imageOverlay');
+      const fullImage = document.getElementById('fullImage');
+      overlay.style.display = 'none';
+      fullImage.src = '';
     }
-});
-</script>
 
-<!-- Slide 3 (#90) -->
-<section class="slide fade-6 kenBurns">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-
-        <div class="fix-10-12 toCenter">
-<!--          <p class="margin-bottom-2 ae-1"><span class="opacity-6">Case study</span></p>-->
-          <h1 class="ae-1">About El</h1>
-          <p class="ae-2"><span class="opacity-8">In this section you can find more info about me and my passions.
-          </span></p>
-        </div>
-        <div class="fix-12-12 margin-top-3">
-          <ul class="flex fixedSpaces later left">
-            <li class="col-3-12 col-tablet-1-2 col-phone-1-1">
-<!--              <div class="button rounded empty margin-bottom-2 videoThumbnail noShadow popupTrigger ae-3" data-popup-id="90-2"><img class="wide" src="assets/img/myimages/photo1.JPG" alt="Video Thumbnail"/></div>-->
-              <a class="button rounded empty margin-bottom-2 ae-4"><img class="wide" src="assets/img/myimages/film.png" alt="Image Thumbnail"/></a>
-              <h3 class="ae-4">Film</h3>
-              <div class="ae-5"><p class="tiny opacity-6">I've thought about a beautiful quote to place here instead I decided to let the work speak for itself. Click and have a look for yourself.</p></div>
-            </li>
-            <li class="col-3-12 col-tablet-1-2 col-phone-1-1">
-              <a class="button rounded empty margin-bottom-2 ae-4"><img class="wide" src="assets/img/myimages/photography.png" alt="Image Thumbnail"/></a>
-              <h3 class="ae-5">Photography</h3>
-              <div class="ae-6"><p class="tiny opacity-6">Even tho' I started in Photography, it's not my greatest passion. However, it is good to remember that it is the start of my journey in Film. Without the knowledge I gathered from Photography through the years, my filming would be nowhere.</p></div>
-            </li>
-            <li class="col-3-12 col-tablet-1-2 col-phone-1-1">
-              <a class="button rounded empty margin-bottom-2 ae-4"><img class="wide" src="assets/img/myimages/mountaineering.png" alt="Image Thumbnail"/></a>
-              <h3 class="ae-6">Mountaineering</h3>
-              <div class="ae-7"><p class="tiny opacity-6">One of my Big Loves. Up above around 2.500m or higher is where I feel home. This is where I feel one with nature. Except when bears want to hug.. I'd rather come down again for a nice catchup with a friend.</p></div>
-            </li>
-            <li class="col-3-12 col-tablet-1-2 col-phone-1-1">
-              <a class="button rounded empty margin-bottom-2 ae-4"><img class="wide" src="assets/img/myimages/photo_5.JPG" alt="Image Thumbnail"/></a>
-              <h3 class="ae-7">Cycling</h3>
-              <div class="ae-8"><p class="tiny opacity-6">The love for cycling is an eternal love and need for exploration. As a nomad it's like second nature to enjoy and to love exploring. New places, new beings, new experiences.</p></div>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Slide 4 (#57) -->
-<section class="slide fade-6 kenBurns">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-        <div class="fix-10-12">
-          <h1 class="fix-9-12 huge ae-1">Contact. To be updated soon..</h1>
-          <ul class="grid equal fixedSpaces margin-top-3">
-            <li class="col-4-12 ae-3">
-              <div class="fix-3-12 equalElement">
-                <h6 class="uppercase opacity-4 margin-top-3 margin-bottom-2">Contact Here:</h6>
-                <p class="tiny"><a class="opacity-8" href="#">Update..</a></p>
-              </div>
-            </li>
-            <li class="col-4-12 ae-4">
-              <div class="fix-3-12 equalElement">
-                <h6 class="uppercase opacity-4 margin-top-3 margin-bottom-2">Youtube Films</h6>
-                <p class="tiny"><a class="opacity-8" href="https://youtu.be/1XuyIfRPwqw">Rembrandt Huis</a></p>
-              </div>
-            </li>
-            <li class="col-4-12 ae-5">
-              <div class="fix-3-12 equalElement">
-                <h6 class="uppercase opacity-4 margin-top-3 margin-bottom-2">Github Repo's</h6>
-                <p class="tiny">
-                  <a class="opacity-8" href="https://github.com/el-codedev/remove_app" target="_blank">Remove Mac Apps Easy</a>
-                  <a class="opacity-8" href="https://github.com/el-codedev/camera_fov_calculator" target="_blank">Camera FOV Calculator</a><br>                
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-<!--  <div class="background" style="background-image:url(assets/img/myimages/background/img-56.jpg)"></div>-->
-</section>
-<!--Social media stuff not for now for later-->
-<!--&lt;!&ndash; Panel Bottom #13 &ndash  ;&gt;-->
-<!--<nav class="panel bottom lastSlideOnly">-->
-<!--  <div class="sections">-->
-<!--    <div class="center">-->
-<!--      <ul class="menu crop">-->
-<!--        <li><a href="http://facebook.com/designmodo" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li>-->
-<!--        <li><a href="http://twitter.com/designmodo" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>-->
-<!--        <li><a href="http://instagram.com/designmodo" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#instagram"></use></svg></a></li>-->
-<!--      </ul>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</nav>-->
-<!-- Loading Progress Bar-->
-<div class="progress-bar blue"></div>
-        <script>
-        window.addEventListener('scroll', () => {
-            const mouse = document.querySelector('.mouse');
-            mouse.classList.add('scrolling');
-            clearTimeout(mouse.scrollTimeout);
-            mouse.scrollTimeout = setTimeout(() => {
-                mouse.classList.remove('scrolling');
-            }, 300);
-        });
-        <script>
-        window.addEventListener('scroll', () => {
-            const mouse = document.querySelector('.mouse');
-            mouse.classList.add('scrolling');
-            clearTimeout(mouse.scrollTimeout);
-            mouse.scrollTimeout = setTimeout(() => {
-                mouse.classList.remove('scrolling');
-            }, 300);
-        });
-    <script>
-        window.addEventListener('scroll', () => {
-            const mouse = document.querySelector('.mouse');
-            mouse.classList.add('scrolling');
-            clearTimeout(mouse.scrollTimeout);
-            mouse.scrollTimeout = setTimeout(() => {
-                mouse.classList.remove('scrolling');
-            }, 300);
-        });
-    </script>
+    // Set current year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,366 @@
+/* style.css */
+/* Root Variables */
+:root {
+    --primary-bg: #000000;
+    --primary-text: #ffffff;
+    --secondary-bg: #1a1a1a;
+    --accent-color: #ffffff;
+    --subtle-line-color: #444444;
+    --paragraph-text-color: #e0e0e0;
+    --footer-text-color: #a0a0a0;
+    --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    line-height: 1.7;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    width: 85%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+
+/* Header */
+header {
+    padding: 10px 0 25px;
+    text-align: center;
+    margin-bottom: 4px; /* roughly 3 lines at 16px line-height */
+
+}
+
+header h1 {
+    font-size: 7em;
+    margin-bottom: 0.2em; /* reduce bottom space */
+    color: var(--accent-color);
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+header .tagline {
+    font-size: 1.1em;
+    color: var(--primary-text);
+    font-weight: 300;
+}
+
+/* Main Sections */
+main section {
+    padding: 50px 0 90px; /* Adjusted top padding */
+    text-align: center;
+}
+
+main section h2 {
+    font-size: 2em;
+    margin-top: 0.6em; /* Adjusted top margin */
+    margin-bottom: 0.5em; /* Adjusted bottom margin */
+    color: var(--accent-color);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+main section h3 {
+    font-size: 1.7em;
+    margin-top: 1.2em; /* Added top margin for separation */
+    margin-bottom: 0.3em; /* Adjusted bottom margin */
+}
+
+main section p {
+    font-size: 1.2em;
+    margin: 0 auto 1em; /* Adjusted bottom margin */
+    max-width: 700px;
+    color: var(--paragraph-text-color);
+}
+
+.projects-section > .project-item:nth-child(1) {
+  margin-bottom: 20px;
+}
+
+.philosophy-section {
+  margin-top:  50px; /* Adjusted top margin */
+}
+
+.projects-section > h2 {
+  font-size: 4em; /* Or your desired size for "Projects" heading */
+  margin-top: 1.5em; /* Adjust top margin */
+  margin-bottom: 0.1em; /* Adjust bottom margin */
+}
+
+.projects-section > p {
+  font-size: 30px; /* Or your desired size for "Projects" heading */
+  margin-top: 10px; /* Adjust top margin */
+  margin-bottom: 10px; /* Adjust bottom margin */
+}
+
+.project-item {
+  margin-top: 2em; /* Add spacing between project items */
+  text-align: center; /* Center project content */
+}
+
+.project-item h3 {
+  font-size: 1.8em; /* Slightly larger than main section h3 */
+  margin-bottom: 0.5em;
+}
+
+.project-item img.project-thumb {
+  max-width: 100%; /* Make images responsive */
+  height: auto;
+  margin-bottom: 1em;
+  cursor: pointer; /* Indicate it's clickable */
+}
+
+.simplicity-section {
+  margin-top: 3em; /* Add more spacing */
+  text-align: center;
+}
+
+.simplicity-section h3 {
+  font-size: 2em; /* Make the title stand out */
+  margin-bottom: 0.8em;
+}
+
+.simplicity-section img.simplicity-thumb {
+  max-width: 60%; /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 1em;
+}
+
+.contact-section {
+  margin-top: 3em;
+  text-align: center;
+}
+
+.contact-section h3 {
+font-size: 95px;
+margin-bottom: 0.8em;
+color: var(--accent-color);
+}
+
+.contact-section a {
+  display: inline-block; /* Allows setting margin/padding */
+}
+
+.contact-section p {
+  font-size: 18px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--paragraph-text-color);
+}
+
+.contact-section a img {
+  width: 100px; /* Adjust size of the robot icon */
+  height: auto;
+}
+
+/* List */
+main > ul {
+    list-style: none;
+    padding-left: 0;
+    max-width: 900px;
+    width: 85%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+main > ul li {
+    font-size: 1.05em;
+    line-height: 1.7;
+    margin-bottom: 0.75em;
+    color: var(--paragraph-text-color);
+}
+
+main > ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Links */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    color: #cccccc;
+    border-bottom-color: #cccccc;
+}
+
+/* Horizontal Rule */
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--subtle-line-color);
+    margin: 80px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 35px 0;
+    background-color: var(--primary-bg);
+    font-size: 0.85em;
+    color: var(--footer-text-color);
+}
+
+/* Scroll Mouse Icon */
+.mouse-icon-container {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.mouse {
+    width: 26px;
+    height: 42px;
+    border: 2px solid var(--primary-text);
+    border-radius: 13px;
+    position: relative;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.mouse:hover {
+    opacity: 0.9;
+}
+
+.scroll-wheel {
+    width: 3px;
+    height: 8px;
+    background-color: var(--primary-text);
+    border-radius: 1.5px;
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: idle-scroll-wheel 1.8s infinite cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.mouse.scrolling .scroll-wheel {
+    animation: active-scroll-wheel 0.3s ease-out forwards;
+}
+
+/* Scroll Wheel Animations */
+@keyframes idle-scroll-wheel {
+    0% {
+        transform: translate(-50%, 0px);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, 4px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(-50%, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes active-scroll-wheel {
+    0% {
+        transform: translate(-50%, -2px);
+        opacity: 1;
+        height: 8px;
+    }
+    50% {
+        transform: translate(-50%, 2px);
+        opacity: 0.8;
+        height: 6px;
+    }
+    100% {
+        transform: translate(-50%, 0px);
+        opacity: 1;
+        height: 8px;
+    }
+}
+
+/* ROBOT */
+.robot-icon-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.robot {
+  width: 350px; /* Adjusted size */
+  height: auto;
+}
+
+/* Animate the raised arm only */
+.waving-arm {
+  transform-origin: 50px 100px; /* base of the arm */
+  animation: wave-arm 2s infinite ease-in-out;
+}
+
+@keyframes wave-arm {
+  0%   { transform: rotate(0deg); }
+  55%  { transform: rotate(-10deg); }
+  25%  { transform: rotate(0deg); }
+  25%  { transform: rotate(5deg); }
+  75% { transform: rotate(2deg); }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header .tagline {
+        font-size: 1em;
+    }
+
+    main section h2 {
+        font-size: 1.6em;
+    }
+
+    main section h3 {
+        font-size: 1.4em;
+    }
+
+    .container,
+    main > ul {
+        width: 90%;
+    }
+
+    .mouse-icon-container {
+        bottom: 15px;
+    }
+
+    .mouse {
+        width: 22px;
+        height: 36px;
+        border-radius: 11px;
+    }
+
+    .scroll-wheel {
+        height: 7px;
+        top: 6px;
+    }
+
+    .robot {
+      width: 100px; /* Adjusted size for smaller screens */
+    }
+}
