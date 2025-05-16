@@ -267,7 +267,7 @@ footer {
 /* --- Scroll Mouse Icon --- */
 .mouse-icon-container {
     position: fixed;
-    bottom: 10px; /* ← Set this to how low you want it */
+    bottom: 5px; /* ← Set this to how low you want it */
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
