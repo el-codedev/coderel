@@ -267,12 +267,13 @@ footer {
 /* --- Scroll Mouse Icon --- */
 .mouse-icon-container {
     position: fixed;
-    bottom: var(--spacing-md); /* Responsive bottom position */
+    bottom: 10px; /* ← Set this to how low you want it */
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
     pointer-events: none;
 }
+
 
 .mouse {
     width: 26px; /* Keep small fixed size */
@@ -393,9 +394,5 @@ footer {
     .contact-section p {
          font-size: 1em; /* Even smaller paragraphs */
          line-height: 1.5;
-    }
-
-    .mouse-icon-container {
-        bottom: var(--spacing-sm);
     }
 }
