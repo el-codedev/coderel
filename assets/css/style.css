@@ -71,30 +71,30 @@ header .tagline {
 
 /* --- Robot Icon (Waving Robot) --- */
 .robot-icon-container {
-  display: flex;
-  justify-content: center;
-  margin-top: var(--spacing-lg); /* Use responsive spacing */
-  margin-bottom: var(--spacing-lg); /* Add spacing below robot */
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-lg); /* Use responsive spacing */
+    margin-bottom: var(--spacing-lg); /* Add spacing below robot */
 }
 
 .robot {
-  width: 200px; /* Default size for smaller screens */
-  max-width: 90%; /* Ensure it doesn't exceed container width */
-  height: auto;
+    width: 200px; /* Default size for smaller screens */
+    max-width: 90%; /* Ensure it doesn't exceed container width */
+    height: auto;
 }
 
 /* Animate the raised arm only */
 .waving-arm {
-  transform-origin: 50px 100px; /* base of the arm */
-  animation: wave-arm 2s infinite ease-in-out;
+    transform-origin: 50px 100px; /* base of the arm */
+    animation: wave-arm 2s infinite ease-in-out;
 }
 
 @keyframes wave-arm {
-  0%   { transform: rotate(0deg); }
-  25%  { transform: rotate(-10deg); }
-  50%  { transform: rotate(0deg); }
-  75%  { transform: rotate(5deg); }
-  100% { transform: rotate(0deg); } /* Ensure it returns to start */
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(-10deg); }
+    50%  { transform: rotate(0deg); }
+    75%  { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); } /* Ensure it returns to start */
 }
 
 /* --- General Image Responsiveness --- */
@@ -127,10 +127,6 @@ img {
     margin-top: var(--spacing-xl); /* Add large space between sections */
 }
 
-/* Remove top margin for the very first section if needed, but typically not an issue */
-/* .philosophy-section { margin-top: var(--spacing-lg); } */
-
-
 /* Section Headings */
 .philosophy-section h2,
 .projects-section h2,
@@ -147,14 +143,14 @@ img {
 
 /* Adjusting specific large headings */
 .projects-section > h2 { /* Targeting the main "Projects" title */
-  font-size: 3em; /* Larger size for main Projects title */
-  margin-bottom: var(--spacing-sm); /* Space below the main title */
+    font-size: 7em; /* Larger size for main Projects title */
+    margin-bottom: var(--spacing-sm); /* Space below the main title */
 }
 
 .contact-section h3 { /* Adjusting Contact heading */
-  font-size: 2.5em; /* Large, but not excessively large */
-  margin-bottom: var(--spacing-md);
-  color: var(--accent-color);
+    font-size: 2.5em; /* Large, but not excessively large */
+    margin-bottom: var(--spacing-md);
+    color: var(--accent-color);
 }
 
 
@@ -172,7 +168,7 @@ img {
 
 /* Specific project description paragraphs */
 .project-item p {
-    font-size: 1em; /* Slightly smaller font for project descriptions */
+    font-size: 22px; /* Slightly smaller font for project descriptions */
     margin: 0 auto 0.5em; /* Less space between description paragraphs */
     max-width: 1000px;
     color: var(--paragraph-text-color);
@@ -182,32 +178,31 @@ img {
 
 /* --- Project Items --- */
 .project-item {
-  margin-top: var(--spacing-xl); /* Add significant spacing between project items */
-  text-align: center; /* Center project content */
+    margin-top: var(--spacing-xl); /* Add significant spacing between project items */
+    text-align: center; /* Center project content */
 }
 
 .project-item h3 { /* Title within a project item */
-  font-size: 1.6em; /* Size for individual project titles */
-  margin-bottom: var(--spacing-sm); /* Space below project title */
-  color: var(--primary-text); /* Use primary text color */
+    font-size: 3.6em; /* Size for individual project titles */
+    margin-bottom: var(--spacing-sm); /* Space below project title */
+    color: var(--primary-text); /* Use primary text color */
 }
 
 /* --- Simplicity Section --- */
 .simplicity-section img.simplicity-thumb {
-  max-width: 80%; /* Allow simplicity image to be larger */
-  margin-bottom: var(--spacing-md);
+    max-width: 80%; /* Allow simplicity image to be larger */
+    margin-bottom: var(--spacing-md);
 }
-
 
 /* --- Contact Section --- */
 .contact-section a {
-  display: inline-block; /* Allows setting margin/padding */
-  margin-top: var(--spacing-md); /* Space above the LinkedIn icon */
+    display: inline-block; /* Allows setting margin/padding */
+    margin-top: var(--spacing-md); /* Space above the LinkedIn icon */
 }
 
 .contact-section a img {
-  width: 80px; /* Adjust size of the robot icon */
-  height: auto;
+    width: 80px; /* Adjust size of the robot icon */
+    height: auto;
 }
 
 /* --- List (if you add one later) --- */
@@ -261,19 +256,18 @@ footer {
     background-color: var(--primary-bg);
     font-size: 0.85em;
     color: var(--footer-text-color);
-    margin-top: var(--spacing-xl); /* Add space above footer */
+    margin-top: 0;
 }
 
 /* --- Scroll Mouse Icon --- */
 .mouse-icon-container {
     position: fixed;
-    bottom: 5px; /* ← Set this to how low you want it */
+    bottom: 10px; /* ← Set this to how low you want it */
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
     pointer-events: none;
 }
-
 
 /* --- MOUSE MAIN CHANGE --- */
 .mouse {
@@ -319,82 +313,34 @@ footer {
 @media (min-width: 769px) {
     /* Adjustments for larger screens (Desktop) */
     header h1 {
-        font-size: 7em; /* Larger size for desktop */
+        font-size: 7em; /* Larger heading */
     }
-
-    .robot {
-      width: 350px; /* Desktop size for the robot */
-      max-width: none; /* Remove max-width constraint on desktop */
-    }
-
-    /* Adjust section spacing for larger screens */
-    .philosophy-section,
-    .projects-section,
-    .simplicity-section,
-    .contact-section {
-         margin-top: 100px; /* More vertical space on desktop */
-         padding: 80px 0;
-    }
-
-    /* Adjust specific large headings for desktop */
-    .projects-section > h2 {
-      font-size: 4em; /* Larger "Projects" heading on desktop */
-    }
-
-    .contact-section h3 {
-        font-size: 95px; /* Original large size for contact heading */
-    }
-
-    .container,
-    main > ul {
-        width: 85%; /* Slightly narrower container on desktop */
-        padding: 50px 0; /* More padding on desktop */
-    }
-
-    /* Adjust font sizes for desktop if needed */
-    main section p,
-    .project-item p,
-    .simplicity-section p,
-    .contact-section p {
-         font-size: 1.2em; /* Slightly larger paragraphs on desktop */
-    }
-
-     .project-item h3 {
-        font-size: 1.8em; /* Slightly larger project titles */
-     }
-
-     .contact-section a img {
-        width: 100px; /* Larger robot icon on desktop */
-     }
-}
-
-@media (max-width: 480px) {
-    /* Extra adjustments for very small screens (e.g., smaller phones) */
-     header h1 {
-        font-size: 3em; /* Even smaller heading */
-     }
-
-    .philosophy-section h2,
-    .projects-section h2,
-    .simplicity-section h3,
-    .contact-section h3 {
+    header .tagline {
         font-size: 1.8em;
     }
-
-    .projects-section > h2 {
-      font-size: 2.5em;
+    .container {
+        max-width: 1200px;
     }
-
-    .project-item h3 {
-      font-size: 1.4em;
+    .robot-icon-container {
+        margin-top: var(--spacing-xl);
+        margin-bottom: var(--spacing-xl);
     }
-
-    main section p,
-    .project-item p,
-    .simplicity-section p,
-    .contact-section p {
-         font-size: 1em; /* Even smaller paragraphs */
-         line-height: 1.5;
-    }
-
 }
+
+@media (max-width: 768px) {
+    /* Tablet and below */
+    header h1 {
+        font-size: 3em;
+    }
+    header .tagline {
+        font-size: 1.1em;
+    }
+    .robot-icon-container {
+        margin-top: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+}
+
+/* --- Fix for extra <br> tags in your HTML --- */
+/* Remove these: use margin or padding for spacing */
+/* Avoid inline <br> tags to control layout */
