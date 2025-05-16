@@ -174,9 +174,9 @@ img {
 .project-item p {
     font-size: 1em; /* Slightly smaller font for project descriptions */
     margin: 0 auto 0.5em; /* Less space between description paragraphs */
-    max-width: 600px;
+    max-width: 1000px;
     color: var(--paragraph-text-color);
-    line-height: 1.6;
+    line-height: 1;
 }
 
 
@@ -275,6 +275,7 @@ footer {
 }
 
 
+/* --- MOUSE MAIN CHANGE --- */
 .mouse {
     width: 26px; /* Keep small fixed size */
     height: 42px;
@@ -395,4 +396,5 @@ footer {
          font-size: 1em; /* Even smaller paragraphs */
          line-height: 1.5;
     }
+
 }
