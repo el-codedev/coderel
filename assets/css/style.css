@@ -1,169 +1,369 @@
-/* Reset and base styles */
+/* style.css - Revised for Responsiveness */
+/* Root Variables */
+:root {
+    --primary-bg: #000000;
+    --primary-text: #ffffff;
+    --secondary-bg: #1a1a1a;
+    --accent-color: #ffffff;
+    --subtle-line-color: #444444;
+    --paragraph-text-color: #e0e0e0;
+    --footer-text-color: #a0a0a0;
+    --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+    /* Define standard spacing units based on viewport width for mobile responsiveness */
+    --space-unit: 1vw; /* Using viewport width for more fluid spacing */
+    --spacing-sm: calc(2 * var(--space-unit));   /* Small spacing */
+    --spacing-md: calc(4 * var(--space-unit));   /* Medium spacing */
+    --spacing-lg: calc(8 * var(--space-unit));   /* Large spacing */
+    --spacing-xl: calc(12 * var(--space-unit));  /* Extra large spacing */
+}
+
+/* --- Reset & Base --- */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #121212;
-  color: #f1f1f1;
-  line-height: 1.6;
-  overflow-x: hidden;
+    /* Styles from your first body rule */
+    font-family: var(--font-main);
+    /* background-color: var(--primary-bg); */ /* See note below */
+    color: var(--primary-text);
+    line-height: 1.6;
+    font-weight: 300;
+    overflow-x: hidden;
+
+    /* WALLPAPER*/
+    background-image: url('assets/img/myimages/xx.jpg'); /* REPLACE THIS PATH AND FILENAME */
+
+    /* Optional: Fallback background color in case the image doesn't load,
+       or if your main wallpaper doesn't cover everything (e.g., if not using background-size: cover)
+       If your wallpaper is meant to be fully opaque and cover everything,
+       you might not strictly need the var(--primary-bg) here, but it's good for fallback. */
+    background-color: var(--primary-bg);
+
+    /* 2. Ensure the background image scrolls with the page content */
+    background-attachment: scroll;
+
+    /* 3. Size your large image to fit the width, height adjusts proportionally */
+    background-size: 100% auto;
+
+    /* 4. Position the background image starting from the top */
+    background-position: top center;
+
+    /* 5. Prevent the image from repeating */
+    background-repeat: no-repeat;
+
+    /* Ensure the body can be tall enough if content is short,
+       but remember content drives the scroll height needed to see a tall background image. */
+    min-height: 100vh;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* Container */
+/* --- Container --- */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+    width: 90%; /* Use 90% width on mobile, less padding needed */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--spacing-md) 0; /* Use responsive padding */
 }
 
-/* Header */
+/* --- Header --- */
 header {
-  text-align: center;
-  margin-bottom: 4rem;
+    padding: var(--spacing-lg) 0; /* Use responsive padding */
+    text-align: center;
+    /* Removed fixed margin-bottom - use spacing below header */
 }
 
 header h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  color: #e0e0e0;
+    font-size: 4em; /* Start with a size that works better on mobile */
+    margin-bottom: 0.2em;
+    color: var(--accent-color);
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.1; /* Adjust line height for large headings */
 }
 
-header p {
-  color: #999;
-  font-size: 1.1rem;
+header .tagline {
+    font-size: 1.1em;
+    color: var(--primary-text);
+    font-weight: 300;
+    margin-bottom: var(--spacing-lg); /* Add spacing below tagline */
 }
 
-/* Grid layout */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
+/* --- Robot Icon (Waving Robot) --- */
+.robot-icon-container {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-lg); /* Use responsive spacing */
+    margin-bottom: var(--spacing-lg); /* Add spacing below robot */
 }
 
-/* Project Cards */
-.card {
-  position: relative;
-  background-color: #1e1e1e;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+.robot {
+    width: 350px; /* Default size for smaller screens */
+    max-width: 90%; /* Ensure it doesn't exceed container width */
+    height: auto;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+/* Animate the raised arm only */
+.waving-arm {
+    transform-origin: 50px 100px; /* base of the arm */
+    animation: wave-arm 2s infinite ease-in-out;
 }
 
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+@keyframes wave-arm {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(-10deg); }
+    50%  { transform: rotate(0deg); }
+    75%  { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); } /* Ensure it returns to start */
 }
 
-.card-body {
-  padding: 1rem;
+/* --- General Image Responsiveness --- */
+/* This rule makes ALL images responsive by default */
+img {
+    max-width: 100%; /* Images will scale down to fit their container */
+    height: auto;    /* Maintain aspect ratio */
+    display: block;  /* Helps prevent extra space below images */
+    margin: 0 auto;  /* Center images if they are smaller than their container */
 }
 
-.card-title {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  color: #ffffff;
+/* Project specific image overrides if needed (but general rule should handle most) */
+.project-item img.project-thumb,
+.simplicity-section img.simplicity-thumb,
+.contact-section a img {
+    /* Specific adjustments for these images if needed,
+       but max-width/height:auto from the general img rule applies */
+    margin-bottom: var(--spacing-sm); /* Add spacing below image */
 }
 
-.card-desc {
-  font-size: 0.95rem;
-  color: #bbb;
+
+/* --- Section Styling --- */
+/* Applying styles to specific section classes instead of just 'main section' */
+.philosophy-section,
+.projects-section,
+.simplicity-section,
+.contact-section {
+    padding: var(--spacing-lg) 0; /* Consistent vertical padding */
+    text-align: center; /* Center section content */
+    margin-top: var(--spacing-xl); /* Add large space between sections */
 }
 
-/* Modal */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(15, 15, 15, 0.95);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 9999;
+/* Section Headings */
+.philosophy-section h2,
+.projects-section h2,
+.simplicity-section h3, /* Simplicity uses h3 */
+.contact-section h3 {
+    font-size: 2.2em; /* A moderate size for section titles */
+    margin-top: 0; /* Remove top margin here, controlled by section padding/margin-top */
+    margin-bottom: 0.5em; /* Space below title */
+    color: var(--accent-color);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
 }
 
-.modal.active {
-  visibility: visible;
-  opacity: 1;
+/* Adjusting specific large headings */
+.projects-section > h2 { /* Targeting the main "Projects" title */
+    font-size: 7em; /* Larger size for main Projects title */
+    margin-bottom: var(--spacing-sm); /* Space below the main title */
 }
 
-.modal-content {
-  position: relative;
-  max-width: 90%;
-  max-height: 90%;
-  overflow: auto;
-  border-radius: 8px;
-  background-color: #1c1c1c;
-  padding: 1rem;
+.contact-section h3 { /* Adjusting Contact heading */
+    font-size: 2.5em; /* Large, but not excessively large */
+    margin-bottom: var(--spacing-md);
+    color: var(--accent-color);
 }
 
-.modal-content img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
+
+/* Paragraphs within Sections */
+.philosophy-section p,
+.projects-section p,
+.simplicity-section p,
+.contact-section p {
+    font-size: 1.1em; /* Moderate paragraph size */
+    margin: 0 auto 1em; /* Center paragraphs and add bottom margin */
+    max-width: 700px;
+    color: var(--paragraph-text-color);
+    line-height: 1.7;
 }
 
-/* Close button */
-.modal-close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
-  z-index: 10000;
+/* Specific project description paragraphs */
+.project-item p {
+    font-size: 22px; /* Slightly smaller font for project descriptions */
+    margin: 0 auto 0.5em; /* Less space between description paragraphs */
+    max-width: 1000px;
+    color: var(--paragraph-text-color);
+    line-height: 1;
 }
 
-/* Responsive typography */
+
+/* --- Project Items --- */
+.project-item {
+    margin-top: var(--spacing-xl); /* Add significant spacing between project items */
+    text-align: center; /* Center project content */
+}
+
+.project-item h3 { /* Title within a project item */
+    font-size: 3.6em; /* Size for individual project titles */
+    margin-bottom: var(--spacing-sm); /* Space below project title */
+    color: var(--primary-text); /* Use primary text color */
+}
+
+/* --- Simplicity Section --- */
+.simplicity-section img.simplicity-thumb {
+    max-width: 80%; /* Allow simplicity image to be larger */
+    margin-bottom: var(--spacing-md);
+}
+
+/* --- Contact Section --- */
+.contact-section a {
+    display: inline-block; /* Allows setting margin/padding */
+    margin-top: var(--spacing-md); /* Space above the LinkedIn icon */
+}
+
+.contact-section a img {
+    width: 80px; /* Adjust size of the robot icon */
+    height: auto;
+}
+
+/* --- List (if you add one later) --- */
+/* Keeping the list styles, assuming they are still desired structure */
+main > ul {
+    list-style: none;
+    padding-left: 0;
+    max-width: 900px;
+    width: 90%; /* Use 90% width */
+    margin: var(--spacing-xl) auto; /* Responsive margin */
+    text-align: center;
+}
+
+main > ul li {
+    font-size: 1em; /* Adjusted size */
+    line-height: 1.7;
+    margin-bottom: 0.75em;
+    color: var(--paragraph-text-color);
+}
+
+main > ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Links --- */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    color: #cccccc;
+    border-bottom-color: #cccccc;
+}
+
+/* --- Horizontal Rule --- */
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--subtle-line-color);
+    margin: var(--spacing-xl) 0; /* Responsive margin */
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: var(--spacing-md) 0; /* Responsive padding */
+    background-color: var(--primary-bg);
+    font-size: 0.85em;
+    color: var(--footer-text-color);
+    margin-top: 0;
+}
+
+/* --- Scroll Mouse Icon --- */
+.mouse-icon-container {
+    position: fixed;
+    bottom: 10px; /* ← Set this to how low you want it */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    pointer-events: none;
+}
+
+/* --- MOUSE MAIN CHANGE --- */
+.mouse {
+    width: 26px; /* Keep small fixed size */
+    height: 42px;
+    border: 2px solid var(--primary-text);
+    border-radius: 13px;
+    position: relative;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.mouse:hover {
+    opacity: 0.9;
+}
+
+.scroll-wheel {
+    width: 3px;
+    height: 8px;
+    background-color: var(--primary-text);
+    border-radius: 1.5px;
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: idle-scroll-wheel 1.8s infinite cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+/* Scroll Wheel Animations (kept as is) */
+@keyframes idle-scroll-wheel {
+    0% { transform: translate(-50%, 0px); opacity: 1; }
+    50% { transform: translate(-50%, 4px); opacity: 0.5; }
+    100% { transform: translate(-50%, 0px); opacity: 1; }
+}
+
+@keyframes active-scroll-wheel {
+    0% { transform: translate(-50%, -2px); opacity: 1; height: 8px; }
+    50% { transform: translate(-50%, 2px); opacity: 0.8; height: 6px; }
+    100% { transform: translate(-50%, 0px); opacity: 1; height: 8px; }
+}
+
+/* --- Responsive Styles (using media queries) --- */
+@media (min-width: 769px) {
+    /* Adjustments for larger screens (Desktop) */
+    header h1 {
+        font-size: 7em; /* Larger heading */
+    }
+    header .tagline {
+        font-size: 1.8em;
+    }
+    .container {
+        max-width: 1200px;
+    }
+    .robot-icon-container {
+        margin-top: var(--spacing-xl);
+        margin-bottom: var(--spacing-xl);
+    }
+}
+
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2.2rem;
-  }
-
-  .card-title {
-    font-size: 1.1rem;
-  }
-
-  .card-desc {
-    font-size: 0.85rem;
-  }
+    /* Tablet and below */
+    header h1 {
+        font-size: 3em;
+    }
+    header .tagline {
+        font-size: 1.1em;
+    }
+    .robot-icon-container {
+        margin-top: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
 }
 
-/* Optional: Scrollbar style */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-track {
-  background: #1a1a1a;
-}
