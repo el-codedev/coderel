@@ -42,7 +42,7 @@ body {
 
     /* 1. Set your BACKGROUND IMAGE URL to an ACTUAL IMAGE FILE using a RELATIVE PATH */
     /* Example: if your CSS is in 'assets/css/' and image is in 'assets/images/' */
-    background-image: url('el-codedev/elcodedev.github.io/assets/img/myimages/wallpaper_words.png'); /* REPLACE THIS PATH AND FILENAME */
+    background-image: url('assets/img/myimages/wallpaper_words.png'); /* REPLACE THIS PATH AND FILENAME */
 
     /* Optional: Fallback background color in case the image doesn't load,
        or if your main wallpaper doesn't cover everything (e.g., if not using background-size: cover)
