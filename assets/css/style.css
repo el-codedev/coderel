@@ -38,10 +38,7 @@ body {
     font-weight: 300;
     overflow-x: hidden;
 
-    /* === Corrected Background Image Styles === */
-
-    /* 1. Set your BACKGROUND IMAGE URL to an ACTUAL IMAGE FILE using a RELATIVE PATH */
-    /* Example: if your CSS is in 'assets/css/' and image is in 'assets/images/' */
+    /* WALLPAPER*/
     background-image: url('assets/img/myimages/wallpaper_words.png'); /* REPLACE THIS PATH AND FILENAME */
 
     /* Optional: Fallback background color in case the image doesn't load,
