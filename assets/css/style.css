@@ -107,7 +107,7 @@ header .tagline {
 }
 
 .robot {
-    width: 200px; /* Default size for smaller screens */
+    width: 350px; /* Default size for smaller screens */
     max-width: 90%; /* Ensure it doesn't exceed container width */
     height: auto;
 }
