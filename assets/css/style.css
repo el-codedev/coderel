@@ -39,7 +39,7 @@ body {
     overflow-x: hidden;
 
     /* WALLPAPER*/
-    background-image: url('assets/img/myimages/wallpaper_words.png'); /* REPLACE THIS PATH AND FILENAME */
+    background-image: url('assets/img/myimages/wallpaper_10.jpg.png'); /* REPLACE THIS PATH AND FILENAME */
 
     /* Optional: Fallback background color in case the image doesn't load,
        or if your main wallpaper doesn't cover everything (e.g., if not using background-size: cover)
@@ -366,7 +366,3 @@ footer {
         margin-bottom: var(--spacing-md);
     }
 }
-
-/* --- Fix for extra <br> tags in your HTML --- */
-/* Remove these: use margin or padding for spacing */
-/* Avoid inline <br> tags to control layout */
