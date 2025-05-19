@@ -39,7 +39,7 @@ body {
     overflow-x: hidden;
 
     /* WALLPAPER*/
-    background-image: url('assets/img/myimages/xx.jpg'); /* REPLACE THIS PATH AND FILENAME */
+    background-image: url('el-codedev/elcodedev.github.io/assets/img/myimages/xx.jpg'); /* REPLACE THIS PATH AND FILENAME */
 
     /* Optional: Fallback background color in case the image doesn't load,
        or if your main wallpaper doesn't cover everything (e.g., if not using background-size: cover)
