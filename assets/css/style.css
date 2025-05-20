@@ -29,6 +29,8 @@ html {
     scroll-behavior: smooth;
 }
 
+/* In your style.css or semanstyle.css file */
+
 body {
     /* Styles from your first body rule */
     font-family: var(--font-main);
@@ -38,7 +40,10 @@ body {
     font-weight: 300;
     overflow-x: hidden;
 
-    /* WALLPAPER*/
+    /* === Corrected Background Image Styles === */
+
+    /* 1. Set your BACKGROUND IMAGE URL to an ACTUAL IMAGE FILE using a RELATIVE PATH */
+    /* Example: if your CSS is in 'assets/css/' and image is in 'assets/images/' */
     background-image: url('assets/img/myimages/xx.jpg'); /* REPLACE THIS PATH AND FILENAME */
 
     /* Optional: Fallback background color in case the image doesn't load,
@@ -77,6 +82,8 @@ header {
     padding: var(--spacing-lg) 0; /* Use responsive padding */
     text-align: center;
     /* Removed fixed margin-bottom - use spacing below header */
+            /* ADDED */
+    margin-top: -100px;
 }
 
 header h1 {
@@ -107,6 +114,7 @@ header .tagline {
     width: 350px; /* Default size for smaller screens */
     max-width: 90%; /* Ensure it doesn't exceed container width */
     height: auto;
+    margin-top: -100px;
 }
 
 /* Animate the raised arm only */
@@ -366,4 +374,3 @@ footer {
         margin-bottom: var(--spacing-md);
     }
 }
-
