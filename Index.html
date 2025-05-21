@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coder El Full Stack Python Developer Portfolio</title>
+  <link rel="stylesheet" href="content/Offline_002.css" />
+  <style>
+    /* Minimal modal image viewer styling */
+    #imageOverlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    #fullImage {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+/* Modal overlay styling for centering image or video */
+#imageOverlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#fullImage,
+#fullVideo {
+  max-width: 90vw;
+  max-height: 90vh;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+  border-radius: 10px;
+  background: #111;
+  display: block;
+}
+
+#fullImage { display: none; }
+#fullVideo { display: none; }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Hi I'm El.</h1>
+      <p class="tagline">And I'm a humble Junior Coder that creates things.</p>
+
+      <div class="robot-icon-container">
+        <svg class="robot" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <g id="robot-body" fill="#fff" stroke="#000" stroke-width="1.5">
+            <rect x="60" y="20" width="80" height="50" rx="10"/>
+            <rect x="75" y="35" width="50" height="25" rx="6"/>
+            <circle cx="85" cy="47" r="4"/>
+            <circle cx="115" cy="47" r="4"/>
+            <line x1="100" y1="20" x2="100" y2="10" stroke-width="3"/>
+            <circle cx="100" cy="5" r="4" stroke-width="2"/>
+            <rect x="70" y="75" width="60" height="50" rx="10"/>
+            <rect x="85" y="95" width="30" height="4" rx="2"/>
+            <path d="M130,80 Q150,100 150,125" stroke-linecap="round" fill="none" stroke-width="5"/>
+            <rect x="142" y="125" width="15" height="20" rx="4"/>
+            <rect x="75" y="130" width="10" height="30" rx="2"/>
+            <rect x="115" y="130" width="10" height="30" rx="2"/>
+            <rect x="70" y="160" width="20" height="10" rx="3"/>
+            <rect x="110" y="160" width="20" height="10" rx="3"/>
+          </g>
+          <g class="waving-arm" fill="#fff" stroke="#000" stroke-width="1.5">
+            <path d="M70,80 Q50,60 50,40" stroke-linecap="round" fill="none" stroke-width="5"/>
+            <rect x="40" y="20" width="15" height="20" rx="4"/>
+          </g>
+        </svg>
+      </div>
+      <div class="philosophy-section js-scroll-fade">
+        <h2>I believe that Evolution == Key ;)</h2>
+        <p>No matter the assignment, if it's something new that helps you.. us for that matter.. something that no one thought of before..</p>
+<br>
+        <h2>Let's work on it togeter!</h2>
+        <img
+          class="project-thumb"
+          src="content/evolution.png"
+          alt="Evolution Project"
+        />
+      </div>
+
+      <div class="projects-section js-scroll-fade">
+        <h2>Projects</h2>
+        <h3>These are some of the projects that I have created for my clients.</h3>
+  <div class="project-item">
+    <h3>Action List</h3>
+    <img
+      src="content/action.png"
+      alt="OFA Project"
+      class="project-thumb"
+      onclick="showLargeImage(this, 'content/Action_List.mp4')">
+    <br>
+    <p>A simple program to guide users in many daily choices they have to make.</p>
+    <p>Go ahead click on the Robot for a video presentation.</p>
+  </div>
+
+
+  <div class="project-item js-scroll-fade">
+          <h3>Create & Translate</h3>
+          <img
+            src="content/translation.png"
+            alt="OFA Project"
+            class="project-thumb">
+            <!-- Head onclick="showLargeImage(this, 'content/manual.png')"-->
+            <p>Why have humans do this time consuming task?</p>
+            <p>When a robot can do it in 1 second and without typing mistakes.</p>
+            <p>This simple solution not only removed the manual work that would take weeks of time.
+            <p>But also executed the task within seconds.</p>
+            <p>Now the employees would not need to manually type in and translate text.</p>
+            <p>Their value could be placed somewhere else now.</p>
+            <p>Ow.. I know there is a word that everybody likes now "AI" it means = Algorithmic Intelligence. And no it's not the go to for every task.</p>
+        </div>
+
+  <div class="project-item js-scroll-fade">
+          <h3>One For All</h3>
+          <img
+            src="content/ofa.png"
+            alt="OFA Project"
+            class="project-thumb"
+            onclick="showLargeImage(this, 'content/ofa_example.png')"/>
+          <p>It can be common and what one is used to. But it's not of this time...</p>
+          <p>Often employees are used to some kind of action for the simple reason of "it has always been like this".</p>
+          <p>But one has to understand that this kind of thinking can get very expensive and very extensive over time.</p>
+          <p>If no one Re-Thinks the way to achieve the goal, we might never reach it and always keep chasing it.</p>
+        </div>
+
+    <div class="project-item js-scroll-fade">
+      <h3>Manual Work</h3>
+      <img
+        src="content/manual.png"
+        alt="Manual Work"
+        class="project-thumb"
+        onclick="showLargeImage(this, 'content/Manual_Work_Images.mp4')">
+      <p>In this video I present a scenario of human action taking huge amounts of time</p>
+        <p>being exchanged for a code that does it in lesser than 1 second.</p>
+      <p>Click on the image for a video presentation.</p>
+    </div>
+
+
+    <div class="project-item js-scroll-fade">
+      <h3>Simplicity = Save Budget</h3>
+      <img
+        src="content/simple.png"
+        alt="Simplicity"
+        class="project-thumb"
+        <--onclick="showLargeImage(this, 'content/simple_full.png')" />
+      <p>My 15+ years in corporate structures taught me: simplicity and maximizing internal resources are paramount for efficiency and cost control. I advocate for empowering on-the-ground expertise to avoid unnecessary complexity and spending.</p>
+    </div>
+
+
+  <div class="contact-section js-scroll-fade">
+          <h3>Contact</h3>
+          <p>If you want to get in touch, just click on the cute Robot, he will take you to my Linkedin</p>
+          <a href="https://www.linkedin.com/in/elgoral-c-b658a1159/" target="_blank" rel="noopener noreferrer">
+            <img src="content/cute.png" alt="LinkedIn Profile">
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="imageOverlay" onclick="closeImage(event)">
+    <img id="fullImage" src="" alt="Full Project Image" style="display:none;" />
+    <video
+      id="fullVideo"
+      controls
+      style="display: none; background:#111; border-radius:10px; max-width:90vw; max-height:90vh;"
+    >
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="currentYear"></span> Coder El. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="mouse-icon-container">
+    <div class="mouse">
+      <div class="scroll-wheel"></div>
+    </div>
+  </div>
+
+  <script src="content/Offline_002.js"></script>
+</body>
+</html>
