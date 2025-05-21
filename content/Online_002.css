@@ -1,4 +1,3 @@
-/* style.css - Revised for Responsiveness */
 /* Root Variables */
 :root {
     --primary-bg: #000000;
@@ -29,43 +28,22 @@ html {
     scroll-behavior: smooth;
 }
 
-/* In your style.css or semanstyle.css file */
+/* BODY */
 
 body {
-    /* Styles from your first body rule */
+    /* Styles */
     font-family: var(--font-main);
-    /* background-color: var(--primary-bg); */ /* See note below */
+    /* background-color: var(--primary-bg); */
     color: var(--primary-text);
     line-height: 1.6;
     font-weight: 300;
     overflow-x: hidden;
-
-    /* === Corrected Background Image Styles === */
-
-    /* 1. Set your BACKGROUND IMAGE URL to an ACTUAL IMAGE FILE using a RELATIVE PATH */
-    /* Example: if your CSS is in 'assets/css/' and image is in 'assets/images/' */
-    background-image: url('wallpaper_10.jpg'); /* REPLACE THIS PATH AND FILENAME */
-
-    /* Optional: Fallback background color in case the image doesn't load,
-       or if your main wallpaper doesn't cover everything (e.g., if not using background-size: cover)
-       If your wallpaper is meant to be fully opaque and cover everything,
-       you might not strictly need the var(--primary-bg) here, but it's good for fallback. */
+    background-image: url('wallpaper_10.jpg');
     background-color: var(--primary-bg);
-
-    /* 2. Ensure the background image scrolls with the page content */
     background-attachment: scroll;
-
-    /* 3. Size your large image to fit the width, height adjusts proportionally */
     background-size: 100% auto;
-
-    /* 4. Position the background image starting from the top */
     background-position: top center;
-
-    /* 5. Prevent the image from repeating */
     background-repeat: no-repeat;
-
-    /* Ensure the body can be tall enough if content is short,
-       but remember content drives the scroll height needed to see a tall background image. */
     min-height: 100vh;
 }
 
@@ -81,8 +59,6 @@ body {
 header {
     padding: var(--spacing-lg) 0; /* Use responsive padding */
     text-align: center;
-    /* Removed fixed margin-bottom - use spacing below header */
-            /* ADDED */
     margin-top: -100px;
 }
 
@@ -102,7 +78,7 @@ header .tagline {
     margin-bottom: var(--spacing-lg); /* Add spacing below tagline */
 }
 
-/* --- Robot Icon (Waving Robot) --- */
+/* --- Waving Robot --- */
 .robot-icon-container {
     display: flex;
     justify-content: center;
@@ -239,7 +215,7 @@ img {
     height: auto;
 }
 
-/* --- List (if you add one later) --- */
+/* --- List (FOR later) --- */
 /* Keeping the list styles, assuming they are still desired structure */
 main > ul {
     list-style: none;
@@ -330,7 +306,7 @@ footer {
     animation: idle-scroll-wheel 1.8s infinite cubic-bezier(0.5, 0, 0.5, 1);
 }
 
-/* Scroll Wheel Animations (kept as is) */
+/* Scroll Wheel Animations */
 @keyframes idle-scroll-wheel {
     0% { transform: translate(-50%, 0px); opacity: 1; }
     50% { transform: translate(-50%, 4px); opacity: 0.5; }
@@ -363,8 +339,7 @@ footer {
 
 @media (max-width: 768px) {
     :root {
-        /* Make vw unit have less impact, or switch to fixed units for mobile spacing */
-        /* Experiment with these: */
+        
         --spacing-sm: 10px;
         --spacing-md: 20px;
         --spacing-lg: 30px;
@@ -373,12 +348,12 @@ footer {
 
     /* Tablet and below */
     header {
-        font-size: 3em; /* This was your existing mobile style */
-        margin-top: 0;    /* GOOD - This resets the negative margin for the header */
+        font-size: 3em; /* mobile style */
+        margin-top: 0;    /* resets the negative margin for the header */
     }
 
     header .tagline {
-        font-size: 1.1em; /* This was your existing mobile style */
+        font-size: 1.1em; /* mobile style */
     }
 
     .robot-icon-container {
@@ -387,8 +362,8 @@ footer {
     }
 
     .robot {
-        margin-top: 0; /* GOOD - This resets the negative margin for the robot */
+        margin-top: 0; /* resets the negative margin for the robot */
     }
 
-    /* ... OTHER MOBILE STYLES WILL GO HERE ... */
+    /* ... ROOM FOR OTHER MOBILE STYLES ... */
 }
