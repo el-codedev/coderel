@@ -362,26 +362,33 @@ footer {
 }
 
 @media (max-width: 768px) {
+    :root {
+        /* Make vw unit have less impact, or switch to fixed units for mobile spacing */
+        /* Experiment with these: */
+        --spacing-sm: 10px;
+        --spacing-md: 20px;
+        --spacing-lg: 30px;
+        --spacing-xl: 40px;
+    }
+
     /* Tablet and below */
     header {
-        font-size: 3em; /* You already have this */
-        margin-top: 0;    /* ADD THIS: Resets the negative margin */
-        /* You could also use a positive margin if needed, e.g., margin-top: 20px;
-           or one of your --spacing variables like: margin-top: var(--spacing-md); */
+        font-size: 3em; /* This was your existing mobile style */
+        margin-top: 0;    /* GOOD - This resets the negative margin for the header */
     }
 
     header .tagline {
-        font-size: 1.1em; /* You already have this */
+        font-size: 1.1em; /* This was your existing mobile style */
     }
 
     .robot-icon-container {
-        margin-top: var(--spacing-md); /* You already have this */
-        margin-bottom: var(--spacing-md); /* You already have this */
+        margin-top: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
     }
 
-    /* ADD or MODIFY styles for the robot itself if needed */
     .robot {
-        margin-top: 0; /* START BY RESETTING THIS TOO, then adjust if needed */
-                       /* e.g., margin-top: var(--spacing-sm); to give it some space below the tagline */
+        margin-top: 0; /* GOOD - This resets the negative margin for the robot */
     }
+
+    /* ... OTHER MOBILE STYLES WILL GO HERE ... */
 }
