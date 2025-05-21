@@ -363,14 +363,25 @@ footer {
 
 @media (max-width: 768px) {
     /* Tablet and below */
-    header h1 {
-        font-size: 3em;
+    header {
+        font-size: 3em; /* You already have this */
+        margin-top: 0;    /* ADD THIS: Resets the negative margin */
+        /* You could also use a positive margin if needed, e.g., margin-top: 20px;
+           or one of your --spacing variables like: margin-top: var(--spacing-md); */
     }
+
     header .tagline {
-        font-size: 1.1em;
+        font-size: 1.1em; /* You already have this */
     }
+
     .robot-icon-container {
-        margin-top: var(--spacing-md);
-        margin-bottom: var(--spacing-md);
+        margin-top: var(--spacing-md); /* You already have this */
+        margin-bottom: var(--spacing-md); /* You already have this */
+    }
+
+    /* ADD or MODIFY styles for the robot itself if needed */
+    .robot {
+        margin-top: 0; /* START BY RESETTING THIS TOO, then adjust if needed */
+                       /* e.g., margin-top: var(--spacing-sm); to give it some space below the tagline */
     }
 }
